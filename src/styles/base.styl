@@ -1,0 +1,52 @@
+@import './color.styl'
+
+*
+  animation fadeIn .5s
+  box-sizing border-box
+  transition transform .5s ease 0s
+
+body
+  background $bg
+  margin 0
+  padding 0
+  align-items center
+  width 100vw
+  display flex
+  padding 30px
+  min-height 400px
+  justify-content center
+  overflow auto
+  font-family Arial, Helvetica, sans-serif
+  flex-direction column
+
+button
+  border 0
+  cursor pointer
+  padding 4px 12px
+  width 120px
+  height 40px
+  font-size 14px
+  font-family Arial, Helvetica, sans-serif
+  color $white
+  border-radius 4px
+
+footer
+  margin-top 100px
+  text-align center
+  padding 30px
+  color $white
+
+a
+  text-decoration none
+  color darken($red, 20%)
+  font-weight 300
+
+  &:hover
+    color lighten($red, 15%)
+
+  &:active
+    color darken($red, 20%)
+
+@keyframes fadeIn
+  from
+    opacity 0

@@ -1,0 +1,37 @@
+@import '../../../styles/color.styl'
+
+
+.container
+  text-align center
+
+.msg
+  color $white
+
+.msg--error
+  font-size 24px
+  font-family 'Gloria Hallelujah', cursive
+
+.msg--warning
+  font-size 14px
+
+
+.btn--error
+  background-color $green
+
+  &:hover
+    background-color lighten($green, 15%)
+
+  &:active
+    background-color darken($green, 20%)
+
+
+.btn--warning
+  height 25px
+  background-color $grey
+  font-size 13px
+
+  &:hover
+    background-color lighten($grey, 15%)
+
+  &:active
+    background-color darken($grey, 20%)
