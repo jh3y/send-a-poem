@@ -33,7 +33,7 @@ class App extends Component {
             error: false,
             loading: false,
             poem: Object.assign({}, poem, {
-              lines: [...poem.lines, ...['', poem.author]],
+              lines: [...poem.lines, ...['', 'Yours', '', poem.author]],
             }),
           })
         } catch (e) {
@@ -72,7 +72,7 @@ class App extends Component {
         {loading && (
           <h2 className={style.loadingMsg}>Contacting PoetryDB... 📞</h2>
         )}
-        {error && <Msg tryAgain={getPoem} type="error" />}
+        {error && <Msg showLabel={true} tryAgain={getPoem} type="error" />}
         {poem && (
           <Composer
             innerRef={c => (this.composer = c)}
@@ -81,8 +81,13 @@ class App extends Component {
             updateRecipient={updateRecipient}
           />
         )}
-        {poem &&
-          poem.lines.length > 20 && <Msg tryAgain={getPoem} type="warning" />}
+        {poem && (
+          <Msg
+            showLabel={poem.lines.length > 20}
+            tryAgain={getPoem}
+            type="warning"
+          />
+        )}
       </Fragment>
     )
   }

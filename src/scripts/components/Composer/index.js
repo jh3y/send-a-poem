@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { TimelineMax } from 'gsap'
+import { TimelineMax, TweenMax } from 'gsap'
 /* eslint-disable no-unused-vars */
 import TextPlugin from 'gsap/TextPlugin'
 /* eslint-enable no-unused-vars */

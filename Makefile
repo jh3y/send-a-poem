@@ -12,7 +12,7 @@ bundle: ## bundles source 📦
 	$(PARCEL) build $(ENTRY_POINT) --public-url ./
 
 test: ## runs tests, linting 🤓
-	$(ESLINT) src/scripts/**/*.js
+	$(ESLINT) src/scripts/
 
 develop: ## develop source 🎨
 	$(PARCEL) $(ENTRY_POINT) --out-dir $(PUBLIC_DIR) -p 1987
